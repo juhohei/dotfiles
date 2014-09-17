@@ -1,0 +1,22 @@
+#include "/home/juho/.colors/butter"
+!#include "/home/juho/.colors/calm"
+!#include "/home/juho/.colors/smooth"
+!#include "/home/juho/.colors/light"
+!#include "/home/juho/.colors/muted"
+
+
+URxvt.cursorUnderline: true
+URxvt.scrollBar: false
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.perl-ext-common: clipboard
+!URxvt.font: xft:termsyn:size=10
+URxvt.font: -misc-termsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1
+!URxvt.font: xft:Cousine:size=8
+URxvt.internalBorder: 2
+
+*VT100.colorBDMode:                   true
+*VT100.colorBD:                       red
+*VT100.colorULMode:                   true
+*VT100.colorUL:                       magenta
+*VT100.veryBoldColors:                6

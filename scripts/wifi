@@ -1,0 +1,13 @@
+#!/bin/bash
+ 
+dev=$(iw dev | grep Interface | tr -d Interface | tr -d [:blank:])
+wifi=$(iwlist $dev scan | grep ESSID | sed s/ESSID:/\/ | tr -d '"')
+ 
+echo "Available networks:"
+echo "$wifi"
+read -p "Connect to: " connect
+printf "Password: "
+read -s password
+echo -e "\nConnecting to $connect..."
+nmcli device wifi connect "$connect" password $password
+echo "Connected to $connect."

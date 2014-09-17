@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sleep $1 && shift &&
+notify-send -u normal "Reminder" "$*" &&
+a="$*" &&
+say en "remind+to+{$a// /+}" &

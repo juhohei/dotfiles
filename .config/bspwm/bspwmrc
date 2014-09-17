@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#alfbabetagammedeltaepsilinzeeta not working w/ current font
+#bspc monitor -d "α" "β" "γ" "δ" "ε" "ζ"
+bspc monitor -d "a" "b" "c" "d" "e" "f"
+
+bspc config top_padding 14
+bspc config left_padding 24
+
+desktop_config() {
+	bspc config $1 $2
+	for M in $(bspc query -M); do
+		bspc config -m $M $1 $2
+	done
+}
+
+desktop_config border_width 0
+desktop_config window_gap 18
+
+bspc config split_ratio         0.50
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config focus_follows_pointer true
+bspc config auto_alternate true
+bspc config auto_cancel true
+#bspc config normal_border_color "#333333"
+#bspc config focused_border_color "#000000"
+#bspc config presel_border_color "#bb0022"
+bspc config normal_frame_opacity 0.0
+bspc config focused_frame_opacity 0.0
+
+
+# Rules
+bspc rule -a Conky sticky=on manage=off lower=on
+bspc rule -a gimp floating=on
+
+# Exec on start
+wmname LG3D
+panel
+

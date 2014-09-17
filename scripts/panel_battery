@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# BATTERY ICONS:
+#      
+
+BAT=`acpi -b | awk '{gsub(/%,/,""); print $4}' | sed 's/%//g'`
+STATUS=`acpi -b | awk '{gsub(/,/,""); print $3}'`
+
+# Set Icon
+icon=""
+if [[ $STATUS != "Discharging" ]]; then
+	icon=""
+elif [[ $BAT -lt 10 ]]; then
+	icon=""
+elif [[ $BAT -lt 40 ]]; then
+	icon=""
+elif [[ $BAT -lt 70 ]]; then
+	icon=""
+else
+	icon=""
+fi
+s="«"
+#s="$s"
+
+bar=""
+case $BAT in
+	100)
+		bar=""
+		;;
+	[0-5])
+		bar="%{F#FFCD546C}$s$s$s$s$s$s$s$s$s"
+		;;
+	[5-9])
+		bar="$s%{F#FFCD546C}$s$s$s$s$s$s$s$s"
+		;;
+	[1-2]*)
+		bar="$s$s%{F#FFCD546C}$s$s$s$s$s$s$s"
+		;;
+	3*)
+		bar="$s$s$s%{F#FFCD546C}$s$s$s$s$s$s"
+		;;
+	4*)
+		bar="$s$s$s$s%{F#FFCD546C}$s$s$s$s$s"
+		;;
+	5*)
+		bar="$s$s$s$s$s%{F#FFCD546C}$s$s$s$s"
+		;;
+	6*)
+		bar="$s$s$s$s$s$s%{F#FFCD546C}$s$s$s"
+		;;
+	7*)
+		bar="$s$s$s$s$s$s$s%{F#FFCD546C}$s$s"
+		;;
+	8*)
+		bar="$s$s$s$s$s$s$s$s%{F#FFCD546C}$s"
+		;;
+	*)
+		bar="$s$s$s$s$s$s$s$s$s"
+		;;
+esac
+
+echo "%{F#FFcd546c}$icon %{F-}"

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+fg="#FFeddcd3"
+bg="#FF181512"
+font1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+font2="-misc-termsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1"
+
+cd $(dirname $0)
+
+if [ $(pgrep -cx panel) -gt 1 ] ; then
+    printf "%s\n" "The panel is already running." >&2
+    exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc control --subscribe > "$PANEL_FIFO" &
+echo "T" >  "$PANEL_FIFO" &
+conky -c ./panel_conky > "$PANEL_FIFO" &
+
+cat "$PANEL_FIFO" | ./panel_bar | bar -g x15  -f "$font2","$font1" -F "$fg" -B "$bg" -u 1 &
+
+wait

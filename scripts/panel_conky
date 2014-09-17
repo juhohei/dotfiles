@@ -1,0 +1,10 @@
+short_units yes3}
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 0.2
+update_interval_on_battery 5
+
+TEXT
+S${execi 1 ./panel_wifi} %{F-}${wireless_essid wlp6s0}  %{F\#FFcd546c} %{F-}${exec amixer get Master | awk 'NR==6 {print $5}' | tr -d '['-']' | tr -d '%'}  ${execi 1 ./panel_battery}${battery_percent}  %{F\#FFcd546c} %{F-}${time %H:%M} 

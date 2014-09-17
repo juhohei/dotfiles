@@ -1,0 +1,31 @@
+URxvt.background:               #181512
+URxvt.foreground:               #EDDCD3
+URxvt.cursorColor:              #CD546C
+URxvt.colorBD:                  #F0E5DF
+URxvt.colorUL:                  #CD546C
+URxvt.colorIT:                  #E3AB8D
+
+! Black                               Black !
+*color0:                              #252525
+*color8:                              #454545
+! Red                                 Red   !
+*color1:                              #CD546C
+*color9:                              #EF545F
+! Green                               Green !
+*color2:                              #A5AF86
+*color10:                             #BDC79E
+! Yellow                              Yellow!
+*color3:                              #CD7860
+*color11:                             #E88773
+! Blue                                Blue  !
+*color4:                              #7A9388
+*color12:                             #94B1A3
+! Magenta                             Magenta
+*color5:                              #917154
+*color13:                             #988574
+! Cyan                                Cyan  !
+*color6:                              #767D75
+*color14:                             #9DA69E
+! White                               White !
+*color7:                              #C2C2A8
+*color15:                             #DBDAC1
