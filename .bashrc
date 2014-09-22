@@ -27,12 +27,11 @@ complete -cf pkill
 complete -cf fakeroot
 complete -cf respawn
 complete -cf pgrep
-complete -cf bunzip2
 # }}}
 
 ## FUNCTIONS {{{
 
-# . dir sizes
+# dir sizes
 dirsize () {
 	du -hd 1
 }
@@ -63,14 +62,13 @@ alias owninstallations="comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-dev
 alias quit="exit"
 alias c="clear"
 
-# Alias to avoid some "PERKELE!!!"
+# !Frustation
 alias :q="quit"
 alias cd..="cd .."
 alias df="df -h"
 alias ping="ping -c 5"
-alias perkele="quit"
 
-# Make some output colorfull
+# Make some output colorful
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias la="ls -alhF --color=auto"
@@ -80,8 +78,8 @@ alias lm="la | less"
 alias mtop="ps --no-header -eo pmem,size,vsize,comm | sort -nr | sed 10q"
 alias ctop="ps --no-header -eo pcpu,comm | sort -nr | sed 10q"
 
-## stupid shit
-alias irc="ssh juho@relativity.fi"
+# irc screen
+alias irc="ssh [removed]"
 
 ## }}}
 
@@ -106,7 +104,7 @@ export HISTFILESIZE=${HISTSIZE} # bash will remember N commands
 export HISTCONTROL=ignoreboth   # ingore duplicates and spaces
 export HISTIGNORE='&:ls:ll:la:cd:exit:clear:history'
 
-#basic shit
+# environment variables
 export EDITOR="vim"
 export PATH=/usr/share/local/bin:$PATH
 export PATH=/home/juho/scripts:$PATH

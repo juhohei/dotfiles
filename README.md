@@ -1,13 +1,12 @@
 dotfiles
 ========
 
-### basics
-
 * bspwm
 * sxhkd
 * urxvt
 * vim (trying to get a grasp of it, at least)
 * ranger
+* irssi
 * mopidy-spotify
 * ncmpcpp
 * mpv
