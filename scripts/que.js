@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 
-/**
- * Author Juho Heinisuo
- * http://github.com/juhohei
- * Version: 0.0.1
- **/
+/* Author: Juho Heinisuo *
+ * Use at your own risk. */
 
 var fs = require('fs');
 
