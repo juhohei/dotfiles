@@ -106,7 +106,6 @@ export HISTIGNORE='&:ls:ll:la:cd:exit:clear:history'
 
 # environment variables
 export EDITOR="vim"
-export PATH=/usr/share/local/bin:$PATH
 export PATH=/home/juho/scripts:$PATH
 export PS1="${fd}> ${nofg}"
 

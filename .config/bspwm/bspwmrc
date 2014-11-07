@@ -2,9 +2,10 @@
 
 #alfbabetagammedeltaepsilinzeeta not working w/ current font
 #bspc monitor -d "α" "β" "γ" "δ" "ε" "ζ"
-bspc monitor -d "a" "b" "c" "d" "e" "f"
+bspc monitor -d "i" "ii" "iii" "iv" "v" "vi"
 
-bspc config top_padding 14
+bspc config top_padding 9
+bspc config bottom_padding -6
 bspc config left_padding 24
 
 desktop_config() {
