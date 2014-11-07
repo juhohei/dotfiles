@@ -4,13 +4,10 @@ dotfiles
 * bspwm
 * sxhkd
 * urxvt
-* vim (trying to get a grasp of it, at least)
-* ranger
+* vim
 * irssi
 * mopidy-spotify
 * ncmpcpp
-* mpv
-* meh
 * hsetroot
 * scrot
 * docky
