@@ -9,8 +9,6 @@ dotfiles
 * mopidy-spotify
 * ncmpcpp
 * hsetroot
-* scrot
-* docky
 
 ![scrot](conf.png)
 
