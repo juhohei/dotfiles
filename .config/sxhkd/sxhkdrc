@@ -104,10 +104,10 @@ super + shift + e
 	killall empty
 
 super + F12
-	amixer set Master 5%+
+	amixer set Master 2%+
 
 super + F11
-	amixer set Master 5%-
+	amixer set Master 2%-
 
 super + F10
 	amixer set Master 100%-

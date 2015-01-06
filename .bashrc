@@ -27,11 +27,12 @@ complete -cf pkill
 complete -cf fakeroot
 complete -cf respawn
 complete -cf pgrep
+complete -cf bunzip2
 # }}}
 
 ## FUNCTIONS {{{
 
-# dir sizes
+# . dir sizes
 dirsize () {
 	du -hd 1
 }
@@ -62,24 +63,28 @@ alias owninstallations="comm -23 <(pacman -Qeq|sort) <(pacman -Qgq base base-dev
 alias quit="exit"
 alias c="clear"
 
-# !Frustation
+# Alias to avoid some "PERKELE!!!"
 alias :q="quit"
 alias cd..="cd .."
 alias df="df -h"
 alias ping="ping -c 5"
+alias perkele="quit"
 
 # Make some output colorful
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
-alias la="ls -alhF --color=auto"
+alias la="ls -alhF"
 alias lm="la | less"
+alias ccal=" cal | grep -A7 -B7 --color=auto $(date +%d)"
 
 # job control
 alias mtop="ps --no-header -eo pmem,size,vsize,comm | sort -nr | sed 10q"
 alias ctop="ps --no-header -eo pcpu,comm | sort -nr | sed 10q"
 
-# irc screen
-alias irc="ssh [removed]"
+## stupid shit
+alias irc="ssh juho@relativity.fi"
+alias fman="man --html=firefox"
+alias redshift="redshift -l 60.1726430:24.9194430"
 
 ## }}}
 
@@ -102,12 +107,17 @@ fi
 export HISTSIZE=10000           # bash history will save N commands
 export HISTFILESIZE=${HISTSIZE} # bash will remember N commands
 export HISTCONTROL=ignoreboth   # ingore duplicates and spaces
-export HISTIGNORE='&:ls:ll:la:cd:exit:clear:history'
+export HISTIGNORE='&:ls:ll:la:cd:exit:clear:history:c'
 
-# environment variables
+#basic shit
 export EDITOR="vim"
+#export PATH=/usr/share/local/bin:$PATH
 export PATH=/home/juho/scripts:$PATH
+#export PATH="`ruby -e 'print Gem.user_dir'`/bin:$PATH"
 export PS1="${fd}> ${nofg}"
+export XDG_MUSIC_DIR=/home/juho/Music
+#eval $(ssh-agent)
+#ssh-add
 
 
 ## }}}
