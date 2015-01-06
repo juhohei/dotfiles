@@ -1,0 +1,10 @@
+#!/home/juho/.venv_tmc/bin/python3
+# EASY-INSTALL-ENTRY-SCRIPT: 'tmc==0.3.5','console_scripts','tmc'
+__requires__ = 'tmc==0.3.5'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('tmc==0.3.5', 'console_scripts', 'tmc')()
+    )

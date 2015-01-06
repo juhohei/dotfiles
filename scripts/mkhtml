@@ -1,0 +1,9 @@
+#!/bin/bash
+
+html="<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset='utf-8'>\n    \
+<link href='style.css' rel='stylesheet' type='text/css'>\n    \
+<script src='script.js'></script>\n  </head>\n  <body>\n  \
+</body>\n</html>"
+
+
+test $1 && echo -e $html > $1.html || echo -e $html > index.html

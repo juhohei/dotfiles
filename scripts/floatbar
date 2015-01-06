@@ -1,0 +1,78 @@
+#!/bin/bash
+
+fg="%{F#FFddccaa}"
+bg="%{F#FF222222}"
+hi="%{F#FFbd5049}"
+green="%{F#FF808d49}"
+yellow="%{F#FFb98d50}"
+blue="%{F#FF506d79}"
+
+clock() {
+  date +'%R'
+}
+
+batt() {
+  cat /sys/class/power_supply/BAT0/capacity 2> /dev/null
+}
+
+vol() {
+  amixer get Master | tail -1 | awk '{print $4}' | tr -d '[]'
+}
+
+music() {
+  if [ "`mpc current`" ]
+  then
+    if [ "`mpc | grep 'playing'`" ]
+    then
+      icon="%{A:mpc pause:}%{A}"
+    fi
+    if [ "`mpc | grep 'paused'`" ]
+    then
+      icon="%{A:mpc play:}%{A}"
+    fi
+  echo "$icon %{A:mpc prev:}%{A} %{A:mpc next:}%{A} `mpc current -f %title%`"
+  fi
+}
+
+apps() {
+  echo "%{A:firefox:}%{A} %{A:urxvt -e ncmpcpp:}%{A} %{A:thunar:}%{A} %{A:libreoffice:}%{A} %{A:urxvt:}%{A} $fg"
+}
+
+close() {
+  if [ "`bspc query -d focused -W`" ]
+  then
+    echo "%{A:bspc window -c:}%{A}"
+  fi
+}   
+
+desktops() {
+  desktops=""
+  for desktop in `bspc query -D`
+  do
+    if [ $desktop = "`bspc query -d focused -D`" ]
+    then
+      desktops="$desktops $hi$desktop"
+    else
+      desktops="$desktops $fg$desktop"
+    fi
+  done
+  echo "$desktops $fg"
+}
+
+while :; do
+  eval cd "/home/juho"
+  buf="$fg $(close)"
+  buf="$buf $(music)"
+  buf="$buf %{c}"
+  buf="$buf $(desktops)"
+  buf="$buf %{r}"
+  buf="$buf $(apps)"
+  buf="$buf $green$fg $(batt)%"
+  buf="$buf $blue$fg $(vol)"
+  buf="$buf $yellow$fg $(clock)"
+  buf="$buf $hi%{A:urxvt -e sudo reboot:}%{A} $fg"
+
+  echo $buf
+  sleep 0.2
+done
+

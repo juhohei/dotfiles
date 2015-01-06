@@ -1,0 +1,9 @@
+#!/bin/bash
+
+amixer set Master $2%$1
+
+vol=$(amixer get Master | grep Left: | awk '{print $5}' | tr -d []%)
+
+if [ $vol = 0 ];
+then notify-send -u normal "Volume" "Audio playback is muted."
+fi

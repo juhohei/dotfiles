@@ -1,3 +1,6 @@
 #!/bin/bash
 
-dmenu_run -i -h 10 -y -1 -x 78 -w 532 -q -p ">" -fn "-misc-termsyn-medium-r-normal--14-101-100-100-c-70-iso8859-1" -nb "#181512" -nf "#eddcd3" -sb "#181512" -sf "#cd546c"
+#font="-gohu-gohufont-medium-r-normal-*-14-100-100-100-c-80-iso8859-1"
+font="Source Code Pro-9"
+
+dmenu_run -i -h 24 -y 12 -x 278 -w 240 -q -p ">" -fn "$font" -nb "#222222" -nf "#ddccaa" -sb "#222222" -sf "#bd5049"

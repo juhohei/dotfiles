@@ -1,0 +1,4 @@
+#!/bin/bash
+
+content='#!/bin/bash\n\n'
+test $1 && echo -e $content > $1 || echo -e $content > script.sh

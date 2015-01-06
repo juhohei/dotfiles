@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sleep $1 && shift &&
+notify-send -u normal "Muistutus" "$*" &&
+a="$*" &&
+say fi $a &
