@@ -82,7 +82,7 @@ alias mtop="ps --no-header -eo pmem,size,vsize,comm | sort -nr | sed 10q"
 alias ctop="ps --no-header -eo pcpu,comm | sort -nr | sed 10q"
 
 ## stupid shit
-alias irc="ssh juho@relativity.fi"
+alias irc="ssh **removed**"
 alias fman="man --html=firefox"
 alias redshift="redshift -l 60.1726430:24.9194430"
 
