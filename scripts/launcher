@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#font="-gohu-gohufont-medium-r-normal-*-14-100-100-100-c-80-iso8859-1"
-font="Source Code Pro-9"
+font="Source Code Pro-12"
 
-dmenu_run -i -h 24 -y 12 -x 278 -w 240 -q -p ">" -fn "$font" -nb "#222222" -nf "#ddccaa" -sb "#222222" -sf "#bd5049"
+dmenu_run -i -h 768 -w 1366 -q -l 1 -o .9 -p "                                     execute" -fn "$font" -nb "#000000" -nf "#ffffff" -sb "#000000" -sf "#aa0022"
