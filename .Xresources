@@ -1,4 +1,5 @@
-#include "/home/juho/.colors/sero"
+#include "/home/juho/.colors/earth"
+!#include "/home/juho/.colors/sero"
 !#include "/home/juho/.colors/blush"
 !#include "/home/juho/.colors/light"
 

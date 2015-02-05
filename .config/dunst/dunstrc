@@ -1,14 +1,10 @@
 [global]
-    font = Cousine 8
+    font = Source Code Pro 9
 
-    # allow a small subset of html markup:
     # <b>bold</b>
     # <i>italic</i>
     # <s>strikethrough<s/>
     # <u>underline</u>
-    #
-    # for a complete reference see http://developer.gnome.org/pango/stable/PangoMarkupFormat.html
-    # If markup is not allowed, those tags will be stripped out of the message.
     allow_markup = yes
 
     # The format of the message. Possible variables are:
@@ -27,7 +23,7 @@
     # Show how many messages are currently hidden (because of geometry)
     indicate_hidden = yes
 
-    # alignment of message text.
+    # Alignment of message text.
     # Possible values are "left", "center" and "right"
     alignment = left
 
@@ -47,10 +43,8 @@
     # ignore newlines '\n' in notifications
     ignore_newline = no
 
-
-    # the geometry of the window
-    # geometry [{width}]x{height}][+/-{x}+/-{y}]
     # The geometry of the message window.
+    # geometry [{width}]x{height}][+/-{x}+/-{y}]
     # The height is measured in number of notifications everything else in pixels. If the width
     # is omitted but the height is given ("-geometry x2"), the message window
     # expands over the whole screen (dmenu-like). If width is 0,
@@ -59,7 +53,7 @@
     # right side of the screen.  Y is measured from the top and down respectevly.
     # The width can be negative. In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-11+36"
+    geometry = "172x12-12+12"
 
     # The transparency of the window. range: [0; 100]
     # This option will only work if a compositing windowmanager is present (e.g. xcompmgr, compiz, etc..)
@@ -125,7 +119,7 @@
 
 [frame]
     width = 1
-    color = "#bb5566"
+    color = "#377222"
 
 [shortcuts]
     # shortcuts are specified as [modifier+][modifier+]...key
@@ -149,18 +143,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the '#' and following  would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#ddccaa"
+    background = "#1b1b1b"
+    foreground = "#bbbbbb"
     timeout = 10
 
 [urgency_normal]
-    background = "#222222"
-    foreground = "#ddccaa"
+    background = "#1b1b1b"
+    foreground = "#bbbbbb"
     timeout = 10
 
 [urgency_critical]
-    background = "#222222"
-    foreground = "#ddccaa"
+    background = "#1b1b1b"
+    foreground = "#bbbbbb"
     timeout = 0
 
 

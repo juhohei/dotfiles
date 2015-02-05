@@ -1,0 +1,24 @@
+#!/bin/bash
+
+focused="%{U#FF377222+u}----------%{U-}"
+active="%{U#FF1b1b1b+u}----------%{U-}"
+normal="%{U#FFbbbbbb+u}----------%{U-}"
+
+desktops() {
+    for desktop in `bspc query -D`
+    do
+        if [ $desktop = "`bspc query -d focused -D`" ]
+        then
+            desktops="$desktops $focused"
+        else 
+            desktops="$desktops $active"
+        fi
+    done
+    echo $desktops
+}
+
+while :; do
+    output=$(desktops)
+    echo "%{c}$output%{r}"
+    sleep 0.1
+done

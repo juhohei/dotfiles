@@ -1,0 +1,3 @@
+#!/bin/bash
+
+notify-send "clock     vol     batt" "`date +'%R'`     `amixer get Master | tail -1 | awk '{print $4}' | tr -d '[]'`     `cat /sys/class/power_supply/BAT0/capacity`"

@@ -95,7 +95,10 @@ super + Return
 	urxvt
 
 super + space
-	launcher
+    launcher
+
+super + z
+    info-notify
 
 super + e
 	empty &

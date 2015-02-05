@@ -1,13 +1,12 @@
 #!/bin/bash
 
-#alfbabetagammedeltaepsilinzeeta not working w/ current font
 #bspc monitor -d "α" "β" "γ" "δ" "ε" "ζ"
 bspc monitor -d "i" "ii" "iii" "iv" "v" "vi"
 
-bspc config top_padding 36
-bspc config left_padding 12
-bspc config right_padding 12
-#bspc config bottom_padding -12
+bspc config top_padding 0
+bspc config left_padding 0
+bspc config right_padding 42
+bspc config bottom_padding 0
 
 desktop_config() {
 	bspc config $1 $2
