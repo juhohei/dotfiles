@@ -32,10 +32,8 @@ bspc config focused_frame_opacity 0.0
 
 
 # Rules
-bspc rule -a Conky sticky=on manage=off lower=on
 bspc rule -a gimp floating=on
 
 # Exec on start
 wmname LG3D
-floatpipe
-
+bottombar
