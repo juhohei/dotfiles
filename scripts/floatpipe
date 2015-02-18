@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd $(dirname $0)
-
-font="Source Code Pro-9"
-icon="FontAwesome-9"
-
-floatbar | bar -g x16 -g 1342x24+12+12 -f "$font","$icon" -F "#FFddccaa" -B "#FF222222" | bash
