@@ -2,6 +2,9 @@
 	set ruler
 	set showcmd
 	set autoindent
+    set ignorecase
+    set smartcase
+    set encoding=utf8
 	set cursorline
 	set nocursorcolumn
 	set nocursorline
@@ -12,8 +15,8 @@
 	set shiftwidth=4
 	set expandtab
 
-	set t_Co=256				" 256 colors 
-	nmap <C-h> <C-w>h			" control h, j, k, l tab navigation
+	set t_Co=256
+	nmap <C-h> <C-w>h
 	nmap <C-j> <C-w>j
 	nmap <C-k> <C-w>k
 	nmap <C-l> <C-w>l
