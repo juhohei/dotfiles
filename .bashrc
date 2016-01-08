@@ -75,7 +75,7 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias la="ls -alhF"
 alias lm="la | less"
-alias ccal=" cal | grep -A7 -B7 --color=auto $(date +%d)"
+alias ccal="cal | grep -C5 --color=auto "`date +%d | sed s/^0/\ /`""
 
 # job control
 alias mtop="ps --no-header -eo pmem,size,vsize,comm | sort -nr | sed 10q"
