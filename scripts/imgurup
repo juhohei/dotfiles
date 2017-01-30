@@ -1,3 +1,0 @@
-#!/bin/bash
-
-curl -s -H "Authorization: Client-ID 9022728c1a4f808" -F "image=@$1" https://api.imgur.com/3/image | grep -Po '"link":.*jpg' | cut -c 8- | tr -d '"\\'
